@@ -1,0 +1,39 @@
+{
+  "name": "agent-ready-repository-score",
+  "version": "0.1.0",
+  "description": "Evidence-backed readiness scoring for repositories used by autonomous coding agents.",
+  "type": "module",
+  "bin": {
+    "repo-ready": "dist/src/cli.js"
+  },
+  "files": [
+    "dist/src",
+    "action.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test --experimental-test-isolation=none dist/test/repo-ready.test.js",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "verify": "npm run lint && npm test",
+    "scan": "node dist/src/cli.js scan ."
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "npm@10.9.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kishorez5n/RepoReady.git"
+  },
+  "homepage": "https://github.com/kishorez5n/RepoReady#readme",
+  "bugs": {
+    "url": "https://github.com/kishorez5n/RepoReady/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

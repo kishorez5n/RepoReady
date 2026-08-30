@@ -1,0 +1,29 @@
+name: Repo Ready
+description: Score how reliably and safely a coding agent can work in a repository.
+author: Repo Ready contributors
+inputs:
+  path:
+    description: Repository directory to scan.
+    default: .
+  mode:
+    description: Use scan for read-only checks or verify to run declared validation commands.
+    default: scan
+  min-score:
+    description: Fail when the readiness score is below this value.
+    default: "0"
+  output:
+    description: JSON report output path.
+    default: .repo-ready/report.json
+outputs:
+  score:
+    description: Numeric readiness score.
+  grade:
+    description: Letter readiness grade.
+  report:
+    description: Absolute path to the JSON report.
+runs:
+  using: node20
+  main: dist/src/action.js
+branding:
+  icon: check-circle
+  color: green

@@ -1,0 +1,12 @@
+{
+  "name": "good-fixture",
+  "private": true,
+  "packageManager": "npm@10.9.0",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node -e \"process.exit(0)\"",
+    "lint": "node -e \"process.exit(0)\"",
+    "test": "node -e \"process.exit(0)\"",
+    "verify": "node -e \"process.exit(0)\""
+  }
+}

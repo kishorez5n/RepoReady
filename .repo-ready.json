@@ -1,0 +1,13 @@
+{
+  "profile": "node",
+  "protectedPaths": [
+    ".github/workflows/**",
+    "action.yml",
+    "src/scoring.ts",
+    "src/rules.ts"
+  ],
+  "excludePaths": [
+    "test/fixtures/unsafe/**"
+  ],
+  "timeoutSeconds": 180
+}
