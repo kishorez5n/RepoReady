@@ -14,6 +14,63 @@ Agent context                  █████████░  90/100
 Safety and permissions         ████████░░  85/100
 ```
 
+## 20-repository benchmark
+
+Repo Ready `0.1.0` was tested against 20 well-known public repositories spanning JavaScript, TypeScript, Python, Go, and Rust. Each block represents approximately 10 score points. Repository links open the exact commit scanned by the benchmark.
+
+### Small repositories
+
+| Repository | Visual score | Score | Grade |
+|---|---|---:|:---:|
+| [sindresorhus/p-limit](https://github.com/sindresorhus/p-limit/commit/df476048d023ff868cd45b35ee47f5fb0ca2b25a) | `██████░░░░` | 59 | C- |
+| [sindresorhus/yocto-queue](https://github.com/sindresorhus/yocto-queue/commit/b07eac099753833b29d06c614149904445739776) | `██████░░░░` | 59 | C- |
+| [chalk/ansi-regex](https://github.com/chalk/ansi-regex/commit/7cf0228990eb38c27f9897f4fb17d42d39075a20) | `██████░░░░` | 59 | C- |
+| [feross/is-buffer](https://github.com/feross/is-buffer/commit/ec4bf3415108e8971375e6717ad63dde752faebf) | `██████░░░░` | 59 | C- |
+| [jonschlinkert/is-number](https://github.com/jonschlinkert/is-number/commit/98e8ff1da1a89f93d1397a24d7413ed15421c139) | `██████░░░░` | 59 | C- |
+| [sindresorhus/slash](https://github.com/sindresorhus/slash/commit/98b618f5a3bfcb5dd374b204868818845b87bb2f) | `██████░░░░` | 59 | C- |
+| [sindresorhus/escape-string-regexp](https://github.com/sindresorhus/escape-string-regexp/commit/cbc42403142c96923b482604e1f3d627b1956aff) | `██████░░░░` | 59 | C- |
+
+### Medium repositories
+
+| Repository | Visual score | Score | Grade |
+|---|---|---:|:---:|
+| [expressjs/express](https://github.com/expressjs/express/commit/023767fe9872e029271df1418f73401bff20ff40) | `██████░░░░` | 59 | C- |
+| [axios/axios](https://github.com/axios/axios/commit/fede1d1562e308077da7994305d63fb7722b66ac) | `████░░░░░░` | 39 | F |
+| [pallets/flask](https://github.com/pallets/flask/commit/d318b683471101618febed18996405ad26462110) | `████░░░░░░` | 39 | F |
+| [fastify/fastify](https://github.com/fastify/fastify/commit/1beaf7e72d24b2fc63a02a7f5806772a00e45454) | `██████░░░░` | 59 | C- |
+| [cli/cli](https://github.com/cli/cli/commit/40b742f76d68e6b1f472942a6368db4b5d765641) | `███████░░░` | 69 | C+ |
+| [gin-gonic/gin](https://github.com/gin-gonic/gin/commit/dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9) | `████░░░░░░` | 39 | F |
+| [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep/commit/3fce3b5bb0236da2df6d99672afb8a719642eca7) | `███████░░░` | 69 | C+ |
+
+### Large repositories
+
+| Repository | Visual score | Score | Grade |
+|---|---|---:|:---:|
+| [facebook/react](https://github.com/facebook/react/commit/2dc7da790d6388b95b83198ca9b588b2ad5f5c0b) | `████░░░░░░` | 39 | F |
+| [microsoft/TypeScript](https://github.com/microsoft/TypeScript/commit/9a8581c393a38961489cc8409ae4dfbe97fc25ec) | `█████████░` | 91 | A |
+| [microsoft/vscode](https://github.com/microsoft/vscode/commit/23f50094841f222bdd0e609fca3d72718048d297) | `████░░░░░░` | 39 | F |
+| [vercel/next.js](https://github.com/vercel/next.js/commit/2fe6f962a1982594bdda96a7de16c594677266d2) | `████░░░░░░` | 39 | F |
+| [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/commit/3375cb24a5f4bd42c80777231f7d364553a59e70) | `████░░░░░░` | 39 | F |
+| [rust-lang/rust](https://github.com/rust-lang/rust/commit/90850177249efe0321573c569aec5d12b257f8d6) | `██████░░░░` | 59 | C- |
+
+### Benchmark summary
+
+```text
+Mean score by size
+Small                         ██████░░░░  59.0
+Medium                        █████░░░░░  53.3
+Large                         █████░░░░░  51.0
+Overall                       █████░░░░░  54.6
+
+Score distribution
+39  F                         ███████      7 repositories
+59  C-                        ██████████  10 repositories
+69  C+                        ██           2 repositories
+91  A                         █            1 repository
+```
+
+The benchmark exposed systematic accuracy gaps as well as strong runtime stability. See the full [benchmark methodology, rule results, and accuracy audit](BENCHMARK.md).
+
 ## Quick start
 
 The project currently runs from source:
