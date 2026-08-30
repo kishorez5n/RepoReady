@@ -131,6 +131,8 @@ npm run scan
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for rule requirements and [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for common failures.
 
+See [BENCHMARK.md](BENCHMARK.md) for the complete 20-repository cross-language benchmark and accuracy audit.
+
 ## Current MVP limitations
 
 - Dynamic verification executes commands in the current environment; sandbox orchestration is planned.
